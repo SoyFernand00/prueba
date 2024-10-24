@@ -27,6 +27,7 @@ foreach (string e in edificio2)
 }
 */
 
+/*
 Console.WriteLine("Ingrese cantidad de elementos: ");
 int n=int.Parse(Console.ReadLine());
 
@@ -40,3 +41,110 @@ for (int x = 0; x < n; x++)
 
 string todos=string.Join(",", numero);
 Console.WriteLine("Numeros: "+todos);
+*/
+
+/*
+Console.WriteLine("A quien buscas?: ");
+string busq=Console.ReadLine().ToLower();
+for(int x = 0; x < edificio2.Length; x++)
+{
+    if (edificio2[x]==busq)
+    {
+        Console.WriteLine("Esta en el piso: " + (x + 1));
+    }
+}
+
+*/
+
+
+/*
+int[] //unimensional
+int[,] //bidimensional
+*/
+
+/*
+int[] num= { 1, 2, 3, 4, 5 };
+
+foreach (int x in num)
+{
+    Console.WriteLine(x+" ");
+
+}
+*/
+
+
+/*
+Random r = new Random();
+
+int n;
+
+Console.WriteLine("Ingrese n: ");
+n=int.Parse(Console.ReadLine());
+int[] nu = new int[n];
+for (int i = 0; i < n; i++)
+{
+    nu[i] =r.Next(0,51);
+    Console.WriteLine(i + " "+nu[i]);
+}
+*/
+
+/*
+int[] num = { 4, 8, 10, 25 };
+
+Console.WriteLine("Lista 1: ");
+foreach (int x in num) 
+{
+    Console.Write(x+" ");
+}
+Console.WriteLine();
+Console.WriteLine();
+Console.WriteLine("Lista 2: ");
+num[2] = 36;
+foreach (int x in num)
+    Console.Write(x+" ");
+*/
+
+
+/*
+    string[] nom = { "jose", "oscar", "carmen", "alexa" };
+    Console.WriteLine("Ingresar nombre a buscar: ");
+    string buscar = Console.ReadLine().ToLower();
+
+    int indice = Array.IndexOf(nom, buscar);
+
+if (indice != -1)   
+{
+    Console.WriteLine($"{buscar} esta en {indice}");
+}
+else
+{
+    Console.WriteLine("No hay compañere");
+}
+*/
+
+char[] nom = { 'a', 'e', 'i', 'o', 'u' };
+Console.WriteLine("LISTA");
+foreach (char s in nom)
+{
+
+    Console.WriteLine(s+" ");
+}
+Console.WriteLine("Que desea modificar: ");
+char modifi=char.Parse(Console.ReadLine()); 
+int indice=Array.IndexOf(nom, modifi);
+if (indice != -1)
+{
+    Console.WriteLine("Ingrese su nuevo valor: ");
+    char nuevo=char.Parse(Console.ReadLine());  
+    Console.WriteLine("lISTA MODIFICADA: ");
+    nom[indice] = nuevo;
+    foreach (char s in nom)
+    {
+        Console.WriteLine(s);
+    }
+}
+else
+{
+    Console.WriteLine("No se puede modificar");
+}
+
