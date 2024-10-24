@@ -122,6 +122,8 @@ else
 }
 */
 
+
+/*
 char[] nom = { 'a', 'e', 'i', 'o', 'u' };
 Console.WriteLine("LISTA");
 foreach (char s in nom)
@@ -148,3 +150,29 @@ else
     Console.WriteLine("No se puede modificar");
 }
 
+*/
+
+
+
+int[] num=new int[0];
+int posi = 0;
+char op;
+int dato;
+do
+{
+    Console.WriteLine("Ingrese valor: ");
+    while (!int.TryParse(Console.ReadLine(), out dato))
+    {
+        Console.WriteLine("ERROR!. Ingrese valor: ");
+    }
+    Array.Resize(ref num, num.Length + 1);
+    num[posi] = dato;
+    posi++;
+
+    do
+    {
+        Console.WriteLine("Desea ingresar mas datos? (s/n): ");
+        op = char.ToLower(Console.ReadKey().KeyChar);
+    } while (op != 's' & op != 'n');
+    Console.WriteLine();
+}while (op=='s');
