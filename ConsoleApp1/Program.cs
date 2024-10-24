@@ -176,3 +176,8 @@ do
     } while (op != 's' & op != 'n');
     Console.WriteLine();
 }while (op=='s');
+Console.WriteLine("Lista:");
+foreach (int i in num)
+{
+    Console.Write(i);
+}
